@@ -1,0 +1,5 @@
+rootProject.name = 'Multiproyecto'
+
+include 'service-booking'
+include 'service-showtimes'
+
