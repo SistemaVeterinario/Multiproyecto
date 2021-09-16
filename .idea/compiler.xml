@@ -9,6 +9,7 @@
         </processorPath>
         <module name="Multiproyecto.service-movies.main" />
         <module name="Multiproyecto.service-showtimes.main" />
+        <module name="Multiproyecto.service-config.main" />
         <module name="Multiproyecto.service-booking.main" />
         <module name="Multiproyecto.service-users.main" />
       </profile>

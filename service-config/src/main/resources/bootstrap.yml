@@ -1,0 +1,17 @@
+  spring:
+    application:
+      name: service-config
+    cloud:
+      config:
+        server:
+          git:
+            uri: "https://github.com/mateoGutierrezD/config-data-springCloud.git"
+            username: mateoGutierrezD
+            password: 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
+    security:
+      user:
+        name: ${CONFIG_USER}
+        password: ${CONFIG_PASSWORD}
+
+  server:
+    port: 9000

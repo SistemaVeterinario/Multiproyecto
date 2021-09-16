@@ -4,5 +4,6 @@ include 'service-booking'
 include 'service-showtimes'
 include 'service-users'
 include 'service-movies'
+include 'service-config'
 
 
