@@ -1,10 +1,10 @@
-package com.poli.serviceshowtime.controller;
+package com.poli.serviceshowtimes.controller;
 
-import com.poli.serviceshowtime.entities.Showtime;
-import com.poli.serviceshowtime.service.ShowtimeService;
-import com.poli.serviceshowtime.utils.ErrorMessage;
-import com.poli.serviceshowtime.utils.Response;
-import com.poli.serviceshowtime.utils.ResponseBuilder;
+import com.poli.serviceshowtimes.entities.Showtime;
+import com.poli.serviceshowtimes.service.ShowtimeService;
+import com.poli.serviceshowtimes.utils.ErrorMessage;
+import com.poli.serviceshowtimes.utils.Response;
+import com.poli.serviceshowtimes.utils.ResponseBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;

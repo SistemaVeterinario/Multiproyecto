@@ -1,4 +1,4 @@
-package com.poli.serviceshowtime.entities;
+package com.poli.serviceshowtimes.entities;
 
 import lombok.*;
 

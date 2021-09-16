@@ -1,4 +1,4 @@
-package com.poli.serviceshowtime.utils;
+package com.poli.serviceshowtimes.utils;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import org.springframework.stereotype.Component;
