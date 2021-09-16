@@ -1,3 +1,4 @@
+
   spring:
     application:
       name: service-config
@@ -5,9 +6,7 @@
       config:
         server:
           git:
-            uri: "https://github.com/mateoGutierrezD/config-data-springCloud.git"
-            username: mateoGutierrezD
-              password: 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
+            uri: file:///C:/Users/s4ds/Desktop/configData
     security:
       user:
         name: ${CONFIG_USER}

@@ -1,4 +1,4 @@
-package com.poli.serviceshowtime;
+package com.poli.serviceshowtimes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

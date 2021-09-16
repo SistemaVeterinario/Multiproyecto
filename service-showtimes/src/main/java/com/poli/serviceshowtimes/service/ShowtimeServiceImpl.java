@@ -1,7 +1,7 @@
-package com.poli.serviceshowtime.service;
+package com.poli.serviceshowtimes.service;
 
-import com.poli.serviceshowtime.entities.Showtime;
-import com.poli.serviceshowtime.repository.ShowtimeRepository;
+import com.poli.serviceshowtimes.entities.Showtime;
+import com.poli.serviceshowtimes.repository.ShowtimeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

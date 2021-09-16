@@ -1,4 +1,4 @@
-package com.poli.serviceshowtime.utils;
+package com.poli.serviceshowtimes.utils;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
