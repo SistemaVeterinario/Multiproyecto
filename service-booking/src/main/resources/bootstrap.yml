@@ -6,3 +6,6 @@ spring:
       uri: http://localhost:9000
       username: admin
       password: admin
+server:
+  port: 9010
+eureka
