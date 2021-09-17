@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/service-booking" />
             <option value="$PROJECT_DIR$/service-config" />
             <option value="$PROJECT_DIR$/service-movies" />
+            <option value="$PROJECT_DIR$/service-register" />
             <option value="$PROJECT_DIR$/service-showtimes" />
             <option value="$PROJECT_DIR$/service-users" />
           </set>
