@@ -6,7 +6,7 @@
       config:
         server:
           git:
-            uri: file:///C:/Users/s4ds/Desktop/configData
+            uri: file:///C:/Users/s4ds/Desktop/Multiproyecto/config-data
     security:
       user:
         name: ${CONFIG_USER}
