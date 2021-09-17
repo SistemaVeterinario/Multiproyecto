@@ -1,9 +1,11 @@
 package com.poli.serviceshowtimes.entities;
 
+import com.poli.serviceshowtimes.model.Movie;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Setter
@@ -23,8 +25,12 @@ public class Showtime {
     @Column(name="date")
     private Date date;
 
-    @Column(name="movies")
-    private Long movies;
+    @Column(name="moviesId")
+    private Long moviesId;
+
+    @Transient
+    private Movie movie;
+
 
     @Override
     public boolean equals(Object o) {
