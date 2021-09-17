@@ -3,8 +3,8 @@ package com.poli.servicebooking;
 import com.poli.serviceuser.entities.User;
 import com.poli.serviceuser.repository.UserRepository;
 import com.poli.serviceuser.service.UserService;
-import com.sun.jdi.LongValue;
 import org.junit.Rule;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
@@ -45,8 +45,9 @@ class ServiceUsersApplicationTests {
         getUsers(users);
 
         Mockito.when(userRepository.findAll()).thenReturn(users);
-        List<User> listService = userService.findAll();
+        List<User> listUsers = userService.findAll();
 
+        Assertions.assertFalse(listUsers.isEmpty());
     }
 
     static ResponseEntity<List<User>> getUsers(List<User> userList) {
