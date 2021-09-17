@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class MovieController {
     private final MovieService movieService;
     private final ResponseBuilder builder;
     @PostMapping
-    public Response save(@RequestBody Movie movie, BindingResult result){
+    public Response save(@Valid  @RequestBody Movie movie, BindingResult result){
         if(result.hasErrors()){
             return builder.failed(this.formatMessage((result)));
         }
@@ -71,7 +72,7 @@ public class MovieController {
                 }).collect(Collectors.toList());
 
         ErrorMessage errorMessage = ErrorMessage.builder()
-                .code("01")
+                .code("02")
                 .message(errors)
                 .build();
         ObjectMapper objectMapper = new ObjectMapper();

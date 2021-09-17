@@ -3,8 +3,10 @@ package com.poli.serviceMovie.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
-
 
 @Setter
 @Getter
@@ -20,12 +22,18 @@ public class Movie {
     @Column(name="id", updatable = false,nullable = false,unique = true)
     private Long id;
 
+
+    @NotEmpty(message = "El director no debe estar en blanco")
     @Column(name="director", nullable = false)
     private String director;
 
+
+    @Min(value = 1, message = "Debe ser minimo 1")
+    @Max(value = 5, message = "Debe ser maximo 5")
     @Column(name="rating" , nullable = false)
     private int rating;
 
+    @NotEmpty(message = "El titulo  no debe estar en blanco")
     @Column(name="title" , nullable = false)
     private String title;
 

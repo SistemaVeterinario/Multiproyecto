@@ -22,10 +22,10 @@ public class Showtime {
     @Column(name="id", updatable = false,nullable = false,unique = true)
     private Long id;
 
-    @Column(name="date")
+    @Column(name="date", nullable = false)
     private Date date;
 
-    @Column(name="moviesId")
+    @Column(name="moviesId", nullable = false)
     private Long moviesId;
 
     @Transient

@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,40 +27,40 @@ public class UserController {
     private final UserService userService;
     private final ResponseBuilder builder;
     @PostMapping
-    public Response save(@RequestBody User booking, BindingResult result){
+    public Response save(@Valid @RequestBody User user, BindingResult result){
         if(result.hasErrors()){
             return builder.failed(this.formatMessage((result)));
         }
-        userService.save(booking);
-        return builder.success(booking);
+        userService.save(user);
+        return builder.success(user);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id){
-        User booking = userService.findById(id);
-        if(booking==null){
+        User user = userService.findById(id);
+        if(user==null){
             return ResponseEntity.notFound().build();
         }
-        userService.delete(booking);
-        return ResponseEntity.ok(booking);
+        userService.delete(user);
+        return ResponseEntity.ok(user);
     }
 
     @GetMapping
     public ResponseEntity<List<User>> findAll(){
-        List<User> bookings = userService.findAll();
-        if(bookings.isEmpty()){
+        List<User> users = userService.findAll();
+        if(users.isEmpty()){
             return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(bookings);
+        return ResponseEntity.ok(users);
     }
 
     @GetMapping("/{id}")
     public Response findById(@PathVariable("id") Long id){
-        User booking = userService.findById(id);
-        if(booking==null){
+        User user = userService.findById(id);
+        if(user==null){
             return builder.success(null);
         }
-        return builder.success(booking);
+        return builder.success(user);
     }
 
     private String formatMessage(BindingResult result){
