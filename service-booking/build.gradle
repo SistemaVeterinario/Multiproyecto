@@ -1,5 +1,5 @@
 ext {
-    set('springCloudVersion', "2020.0.3")
+    set('springCloudVersion', "Hoxton.SR8")
 }
 
 dependencies {
@@ -14,6 +14,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-config'
+
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 }
 
 dependencyManagement {

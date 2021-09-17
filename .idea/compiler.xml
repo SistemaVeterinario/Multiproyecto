@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
@@ -10,6 +11,7 @@
         <module name="Multiproyecto.service-movies.main" />
         <module name="Multiproyecto.service-showtimes.main" />
         <module name="Multiproyecto.service-config.main" />
+        <module name="Multiproyecto.service-register.main" />
         <module name="Multiproyecto.service-booking.main" />
         <module name="Multiproyecto.service-users.main" />
       </profile>
