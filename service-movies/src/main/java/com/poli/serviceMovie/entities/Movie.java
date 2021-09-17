@@ -1,10 +1,11 @@
 package com.poli.serviceMovie.entities;
 
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
-
 
 @Setter
 @Getter
@@ -20,12 +21,15 @@ public class Movie {
     @Column(name="id", updatable = false,nullable = false,unique = true)
     private Long id;
 
+    @NotEmpty(message = "El director no debe estar en blanco")
     @Column(name="director", nullable = false)
     private String director;
 
+    @NotEmpty(message = "El nombre  no debe estar en blanco")
     @Column(name="rating" , nullable = false)
     private int rating;
 
+    @NotEmpty(message = "El titulo  no debe estar en blanco")
     @Column(name="title" , nullable = false)
     private String title;
 
