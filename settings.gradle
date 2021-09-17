@@ -6,4 +6,5 @@ include 'service-users'
 include 'service-movies'
 include 'service-config'
 include 'service-register'
+include 'service-gateway'
 
