@@ -46,8 +46,13 @@ class ServiceUsersApplicationTests {
         Assertions.assertTrue(listUsers.size() > 0);
     }
 
-<<<<<<< HEAD
-=======
+    static List<User> getUsers(List<User> userList) {
+        userList.add(new User(Long.valueOf(1),"Juan","López"));
+        userList.add(new User(Long.valueOf(2),"Mateo","Gutierrez"));
+        userList.add(new User(Long.valueOf(3),"Pablo","Diaz"));
+        return userList;
+    }
+
     @Test
     public void testShouldByIdUser() {
         User user = new User(Long.valueOf(1), "Juan", "López");
@@ -60,11 +65,5 @@ class ServiceUsersApplicationTests {
         Assertions.assertTrue(userComparar.equals(userData));
     }
 
->>>>>>> ec91a14827387087891cfac10e3f8ab5ce203bdb
-    static List<User> getUsers(List<User> userList) {
-        userList.add(new User(Long.valueOf(1),"Juan","López"));
-        userList.add(new User(Long.valueOf(2),"Mateo","Gutierrez"));
-        userList.add(new User(Long.valueOf(3),"Pablo","Diaz"));
-        return userList;
-    }
+
 }
