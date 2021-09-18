@@ -35,9 +35,6 @@ class ServiceUsersApplicationTests {
     @Mock
     UserService userService;
 
-    @Mock
-    UserRepository userRepository;
-
     @Test
     public void testShouldListUsers(){
         List<User> users = new ArrayList<User>();
@@ -49,6 +46,21 @@ class ServiceUsersApplicationTests {
         Assertions.assertTrue(listUsers.size() > 0);
     }
 
+<<<<<<< HEAD
+=======
+    @Test
+    public void testShouldByIdUser() {
+        User user = new User(Long.valueOf(1), "Juan", "López");
+
+        Mockito.when(userService.findById(Long.valueOf(1))).thenReturn(user);
+        User userData = userService.findById(Long.valueOf(1));
+
+        User userComparar = new User(Long.valueOf(1), "Juan", "López");
+
+        Assertions.assertTrue(userComparar.equals(userData));
+    }
+
+>>>>>>> ec91a14827387087891cfac10e3f8ab5ce203bdb
     static List<User> getUsers(List<User> userList) {
         userList.add(new User(Long.valueOf(1),"Juan","López"));
         userList.add(new User(Long.valueOf(2),"Mateo","Gutierrez"));
