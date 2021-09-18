@@ -19,8 +19,9 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-@SpringBootTest
+@SpringBootTest(classes = User.class)
 @RunWith(MockitoJUnitRunner.Silent.class)
 class ServiceUsersApplicationTests {
 
@@ -33,7 +34,7 @@ class ServiceUsersApplicationTests {
 
     @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 
-    @InjectMocks
+    @Mock
     UserService userService;
 
     @Mock
@@ -49,6 +50,10 @@ class ServiceUsersApplicationTests {
 
         Assertions.assertFalse(listUsers.isEmpty());
     }
+
+
+
+
 
     static ResponseEntity<List<User>> getUsers(List<User> userList) {
         userList.add(new User(Long.valueOf(1),"Juan","López"));
